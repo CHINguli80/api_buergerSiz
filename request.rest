@@ -1,0 +1,65 @@
+POST http://localhost:3000/api/buergers
+content-Type: application/json
+
+{
+    "nome": "Jenirel Lisboa",
+    "pao": "Integral",
+    "carne": "Alcatra",
+    "opcionais": [
+        "Bacon",
+        "Salame"
+      ],
+    "bebida": "Pepsi",
+    "acompanhante": "Doritos Bites",
+    "status": "Solicitado"
+}
+
+### 
+GET http://localhost:3000/api/buergers
+
+###
+DELETE http://localhost:3000/api/buergers/6532f8463b9c935faa6c2dad
+
+###
+PATCH  http://localhost:3000/api/buergers/6532f2236c2a18e617276f6c
+content-Type: application/json
+
+{
+    "status": "Em produção"
+}
+
+###
+POST http://localhost:3000/api/ingredientes
+content-Type: application/json
+
+{
+    "paes": {
+        "tipo": "Integral"
+    },
+    "carnes": {
+        "tipo": "Carne Vegana"
+    },
+    "opcionais": {
+        "tipo": "Cebola roxa"
+    },
+    "bebidas": {
+        "tipo": "Fanta"
+    },
+    "acompanhantes": {
+        "tipo": "Bucket assas de frangos"
+    }
+}
+
+###
+GET http://localhost:3000/api/status
+
+### 
+POST http://localhost:3000/api/acompanhante
+content-Type: application/json
+
+{
+    "tipo": "Bucket asas de frangos"
+}
+
+###
+DELETE http://localhost:3000/api/buergers/6533118b97e40b32cd0e4254
