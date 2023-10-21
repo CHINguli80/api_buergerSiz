@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 
 const app = express()
-const port = 3000
+const port =  process.env.PORT || 3000
 
 
 app.use(express.json())
@@ -26,6 +26,6 @@ const routes = require('./routes/Router')
 
    app.use("/api", routes)
 
- app.listen(process.env.PORT, port, () => {
+ app.listen(port, () => {
     console.log("Servidor online")
  }) 
