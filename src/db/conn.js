@@ -7,7 +7,7 @@ async function main() {
         mongoose.set("strictQuery", true)
 
         await mongoose.connect(
-            "mongodb+srv://moraisdomingos:CHINguli80@cluster0.4obnvse.mongodb.net/?retryWrites=true&w=majority"
+            process.env.DATABASE_URL || "mongodb+srv://moraisdomingos:CHINguli80@cluster0.4obnvse.mongodb.net/?retryWrites=true&w=majority"
         );
 
         console.log("Connectado ao banco")
